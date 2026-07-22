@@ -21,7 +21,7 @@ export default function Certificates() {
           {certImages.map((src, index) => (
             <div 
               key={index} 
-              className="relative w-full rounded-2xl overflow-hidden shadow-sm bg-cream border border-tiato/5 flex items-center justify-center p-2"
+              className="relative w-full rounded-2xl overflow-hidden border border-gray-100 bg-white p-2 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1.5 cursor-default flex items-center justify-center"
             >
               {/* Vị trí ảnh không cố định height để responsive theo tỉ lệ nội dung */}
               <div className="relative w-full aspect-[3/4] md:aspect-[4/5]">

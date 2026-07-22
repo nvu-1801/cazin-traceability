@@ -17,7 +17,7 @@ function AccordionItem({
     <div className="border-b border-tiato/10 py-4">
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between text-left focus:outline-none group"
+        className="flex w-full items-center justify-between text-left focus:outline-none group hover:bg-gray-50 transition-colors duration-300 p-3 -mx-3 rounded-xl"
       >
         <span className="font-semibold text-tiato/90 text-[17px] md:text-[19px] group-hover:text-tiato transition-colors">
           {title}
@@ -70,7 +70,7 @@ export default function ProductInfo() {
           </div>
 
           {/* Grid thông số */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 bg-white p-5 rounded-2xl shadow-sm border border-tiato/5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-50">
             <div className="flex flex-col">
               <span className="text-xs text-bodytext/60 uppercase tracking-wider mb-1">Khối lượng tịnh</span>
               <span className="font-medium text-tiato md:text-lg">80g</span>

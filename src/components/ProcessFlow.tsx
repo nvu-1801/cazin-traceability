@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState, useRef } from "react";
 
 const steps = [
   {
@@ -39,7 +41,35 @@ const steps = [
   }
 ];
 
+// Custom hook to detect when element is in viewport
+function useIntersectionObserver(options: IntersectionObserverInit = {}) {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const targetRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsIntersecting(true);
+        // Ngắt theo dõi khi đã hiển thị để chỉ animate 1 lần
+        if (targetRef.current) observer.unobserve(targetRef.current);
+      }
+    }, options);
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => {
+      if (targetRef.current) observer.unobserve(targetRef.current);
+    };
+  }, [options]);
+
+  return [targetRef, isIntersecting] as const;
+}
+
 export default function ProcessFlow() {
+  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
   return (
     <section className="w-full px-5 py-8 md:py-12">
       <div className="max-w-7xl mx-auto">
@@ -48,11 +78,22 @@ export default function ProcessFlow() {
           <span className="w-16 h-1 bg-tiato rounded-full"></span>
         </h2>
 
-        <div className="relative pl-8 sm:pl-10 md:pl-12 border-l-2 border-tiato/20 py-2 space-y-12">
+        <div 
+          ref={ref}
+          className="relative pl-8 sm:pl-10 md:pl-12 border-l-2 border-tiato/20 py-2 space-y-12"
+        >
           {steps.map((step, index) => (
-            <div key={index} className="relative">
+            <div 
+              key={index} 
+              className={`relative transition-all duration-700 transform ${
+                isVisible 
+                  ? "opacity-100 translate-y-0" 
+                  : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: (index * 150) + "ms" }}
+            >
               {/* Vòng tròn Icon */}
-              <div className="absolute -left-[49px] sm:-left-[57px] md:-left-[73px] top-0 md:-top-2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-cream border-[3px] border-tiato flex items-center justify-center text-tiato z-10 shadow-sm">
+              <div className="absolute -left-[49px] sm:-left-[57px] md:-left-[73px] top-0 md:-top-2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-cream border-[3px] border-tiato flex items-center justify-center text-tiato z-10 shadow-sm transition-transform duration-300 hover:scale-110 cursor-default">
                 {step.icon}
               </div>
               
