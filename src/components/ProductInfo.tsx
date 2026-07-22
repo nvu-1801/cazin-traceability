@@ -59,9 +59,14 @@ export default function ProductInfo() {
             TRÀ TÍA TÔ TÚI LỌC CAZIN
           </h1>
           
-          <p className="text-bodytext/80 text-[15px] md:text-[17px] leading-relaxed italic mb-6">
-            Trà tía tô túi lọc CAZIN là sự kết tinh từ nguồn dược liệu tuyển chọn tại Gia Lai, kết hợp hài hòa giữa tía tô, sả và gừng, mang hương thơm thanh dịu và vị ấm tự nhiên đặc trưng. Được chế biến từ 100% nguyên liệu tự nhiên, không hương liệu, không chất bảo quản...
-          </p>
+          <div className="text-bodytext/80 text-[15px] md:text-[17px] leading-relaxed italic mb-6 space-y-3">
+            <p>
+              Trà tía tô túi lọc CAZIN là sự kết tinh từ nguồn dược liệu tuyển chọn tại Gia Lai, kết hợp hài hòa giữa tía tô, sả và gừng, mang hương thơm thanh dịu và vị ấm tự nhiên đặc trưng. Được chế biến từ 100% nguyên liệu tự nhiên, không hương liệu, không chất bảo quản, sản phẩm mang đến trải nghiệm thưởng trà tiện lợi và chất lượng.
+            </p>
+            <p>
+              Mỗi tách trà không chỉ lưu giữ tinh túy của thảo mộc Việt, mà còn gửi gắm giá trị của vùng đất Gia Lai và mang tinh hoa trà thảo mộc Gia Lai đến với người tiêu dùng.
+            </p>
+          </div>
 
           {/* Thành phần */}
           <div className="mb-6">
@@ -83,11 +88,27 @@ export default function ProductInfo() {
               <span className="text-xs text-bodytext/60 uppercase tracking-wider mb-1">Quy cách</span>
               <span className="font-medium text-tiato md:text-lg">40 túi lọc × 2g/hộp</span>
             </div>
+            <div className="col-span-2 md:col-span-3 flex flex-col pt-2 border-t border-tiato/5">
+              <span className="text-xs text-bodytext/60 uppercase tracking-wider mb-1">Chất liệu bao bì</span>
+              <span className="font-medium text-tiato md:text-lg">Túi lọc giấy; hộp giấy cứng đảm bảo an toàn dùng trong thực phẩm.</span>
+            </div>
           </div>
         </div>
 
         {/* Khối 3: Hướng dẫn & Công dụng (Accordion) */}
         <div className="space-y-1">
+          <AccordionItem 
+            title="Thông tin nguyên liệu" 
+            content={
+              <p className="text-bodytext/90 leading-relaxed flex items-start gap-2">
+                <svg className="w-5 h-5 md:w-6 md:h-6 text-[#81C784] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                </svg>
+                Tía tô, sả và gừng được thu mua từ các vùng nguyên liệu tại Canh Vinh, An Khê và các vùng lân cận thuộc tỉnh Gia Lai.
+              </p>
+            } 
+          />
+
           <AccordionItem 
             title="Công dụng nổi bật" 
             defaultOpen={true}
@@ -145,12 +166,24 @@ export default function ProductInfo() {
           />
 
           <AccordionItem 
-            title="Bảo quản" 
+            title="Lưu ý & Bảo quản" 
             content={
-              <ul className="list-disc pl-5 space-y-2 marker:text-tiato/60">
-                <li>Để nơi khô ráo, thoáng mát.</li>
-                <li>Không sử dụng khi sản phẩm có dấu hiệu ẩm mốc, biến màu.</li>
-                <li>Không sử dụng hương liệu, chất bảo quản.</li>
+              <p className="text-bodytext/90 leading-relaxed">
+                <strong>Bảo quản:</strong> Để nơi khô ráo, thoáng mát.<br/>
+                <strong>Khuyến cáo:</strong> Không sử dụng khi sản phẩm có dấu hiệu ẩm mốc, biến màu hoặc có mùi lạ. Không sử dụng hương liệu, chất bảo quản.
+              </p>
+            } 
+          />
+
+          <AccordionItem 
+            title="Thông tin truy xuất" 
+            content={
+              <ul className="space-y-2 text-bodytext/90">
+                <li><strong className="font-semibold text-tiato/90">Ngày sản xuất:</strong> Xem trên bao bì</li>
+                <li><strong className="font-semibold text-tiato/90">Hạn sử dụng:</strong> 12 tháng kể từ ngày sản xuất</li>
+                <li><strong className="font-semibold text-tiato/90">Số bản tự công bố:</strong> 03/NCD/2023</li>
+                <li><strong className="font-semibold text-tiato/90">TCCS:</strong> 04:2023</li>
+                <li><strong className="font-semibold text-tiato/90">Xuất xứ:</strong> Việt Nam</li>
               </ul>
             } 
           />

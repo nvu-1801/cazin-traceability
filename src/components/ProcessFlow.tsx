@@ -2,46 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 
-const steps = [
-  {
-    title: "Vùng nguyên liệu",
-    description: "Thu mua từ Canh Vinh, An Khê và các vùng lân cận thuộc tỉnh Gia Lai.",
-    icon: (
-      <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-      </svg>
-    )
-  },
-  {
-    title: "Sơ chế",
-    description: "Nguyên liệu thân, lá Tía Tô được chọn lọc, rửa sạch và băm nhỏ.",
-    icon: (
-      <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25" />
-      </svg>
-    )
-  },
-  {
-    title: "Sấy khô & Phối trộn",
-    description: "Sấy khô đạt chuẩn, nghiền và phối trộn: gừng 10%, tía tô 80%, sả 10%.",
-    icon: (
-      <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-      </svg>
-    )
-  },
-  {
-    title: "Đóng gói",
-    description: "Đóng gói túi lọc, cho vào hộp giấy giữ hương, đảm bảo an toàn thực phẩm.",
-    icon: (
-      <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
-      </svg>
-    )
-  }
-];
-
-// Custom hook to detect when element is in viewport
+// Hook để bắt sự kiện cuộn trang
 function useIntersectionObserver(options: IntersectionObserverInit = {}) {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -50,7 +11,6 @@ function useIntersectionObserver(options: IntersectionObserverInit = {}) {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsIntersecting(true);
-        // Ngắt theo dõi khi đã hiển thị để chỉ animate 1 lần
         if (targetRef.current) observer.unobserve(targetRef.current);
       }
     }, options);
@@ -67,47 +27,66 @@ function useIntersectionObserver(options: IntersectionObserverInit = {}) {
   return [targetRef, isIntersecting] as const;
 }
 
+const steps = [
+  "Nguyên liệu",
+  "Băm, Rửa",
+  "Sấy khô",
+  "Nghiền",
+  "Phối trộn",
+  "Đóng gói, thành phẩm"
+];
+
 export default function ProcessFlow() {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section className="w-full px-5 py-8 md:py-12">
+    <section className="w-full px-5 py-8 md:py-12 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-tiato mb-10 inline-flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-tiato mb-8 inline-flex items-center gap-3">
           Quy trình sản xuất
           <span className="w-16 h-1 bg-tiato rounded-full"></span>
         </h2>
 
         <div 
           ref={ref}
-          className="relative pl-8 sm:pl-10 md:pl-12 border-l-2 border-tiato/20 py-2 space-y-12"
+          className={`transition-all duration-700 transform ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
         >
-          {steps.map((step, index) => (
-            <div 
-              key={index} 
-              className={`relative transition-all duration-700 transform ${
-                isVisible 
-                  ? "opacity-100 translate-y-0" 
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: (index * 150) + "ms" }}
-            >
-              {/* Vòng tròn Icon */}
-              <div className="absolute -left-[49px] sm:-left-[57px] md:-left-[73px] top-0 md:-top-2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-cream border-[3px] border-tiato flex items-center justify-center text-tiato z-10 shadow-sm transition-transform duration-300 hover:scale-110 cursor-default">
-                {step.icon}
-              </div>
-              
-              {/* Nội dung */}
-              <div className="pt-1.5 md:pt-3 pl-2 md:pl-6">
-                <h3 className="text-lg md:text-xl font-bold text-tiato mb-2">
-                  Bước {index + 1}: {step.title}
-                </h3>
-                <p className="text-[15px] md:text-lg text-bodytext/80 leading-relaxed max-w-2xl">
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          ))}
+          {/* Phần 1: Sơ đồ dạng Badge + Mũi tên */}
+          <div className="flex flex-wrap items-center gap-2 md:gap-4 mb-8">
+            {steps.map((step, index) => (
+              <React.Fragment key={index}>
+                {/* Thẻ Bước */}
+                <div 
+                  className="bg-cream border border-tiato/10 text-tiato font-medium px-4 py-2 rounded-lg shadow-sm text-sm md:text-base transition-transform duration-300 hover:scale-105 hover:shadow-md cursor-default"
+                >
+                  {step}
+                </div>
+                
+                {/* Mũi tên (Không render sau thẻ cuối cùng) */}
+                {index < steps.length - 1 && (
+                  <svg 
+                    className="w-4 h-4 md:w-5 md:h-5 text-bodytext/40 shrink-0" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor" 
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+
+          {/* Phần 2: Thuyết minh chi tiết */}
+          <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <h3 className="font-semibold text-tiato mb-3 text-lg">Thuyết minh quy trình:</h3>
+            <p className="text-bodytext/90 text-[15px] md:text-[16px] leading-relaxed">
+              Nguyên liệu đầu vào thân và lá Tía Tô được chọn lọc kỹ về chất lượng, sau đó được rửa sạch, băm nhỏ. Tiếp đến đưa qua máy sấy khô đạt theo tiêu chuẩn quy định rồi tiến hành nghiền và phối trộn theo tỷ lệ: gừng 10%, tía tô 80%, sả 10%. Tiếp tục quy trình, trà Tía Tô được đóng gói túi lọc rồi cho vào hộp giấy có cấu tạo đặc biệt nhằm giữ lại mùi hương, mang lại vẻ sang trọng và đảm bảo an toàn cho người sử dụng.
+            </p>
+          </div>
         </div>
       </div>
     </section>
