@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const images = [
-  "/images/1.jpg",
-  "/images/3.jpg",
-  "/images/4.jpg",
-  "/images/5.jpg"
+  "/images/1.png",
+  "/images/3.png",
+  "/images/4.png",
+  "/images/5.png"
 ];
 
 export default function ProductGallery() {

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,18 +21,23 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
           ? "bg-cream/90 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.03)] py-3" 
-          : "bg-transparent py-5"
+          : "bg-cream/50 backdrop-blur-sm py-5"
       }`}
     >
-      <div className="mx-auto px-5 flex items-center justify-between max-w-5xl">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-full bg-tiato flex items-center justify-center text-cream font-bold text-lg shadow-sm group-hover:bg-tiato/90 transition-colors">
-            C
+          <div className="relative w-[120px] h-[40px]">
+            <Image 
+              src="/logo/logo.png" 
+              alt="CAZIN Logo" 
+              fill
+              sizes="120px"
+              className="object-contain object-left"
+            />
           </div>
-          <span className="font-semibold text-tiato text-xl tracking-tight">CAZIN</span>
         </Link>
         
         <div className="flex items-center gap-4">

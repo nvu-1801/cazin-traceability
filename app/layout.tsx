@@ -23,8 +23,10 @@ export default function RootLayout({
       lang="vi"
       className={`${beVietnamPro.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-cream text-bodytext">
-        {children}
+      <body className="min-h-full font-sans bg-cream text-bodytext">
+        <div className="max-w-7xl mx-auto w-full bg-cream min-h-screen relative overflow-x-hidden">
+          {children}
+        </div>
       </body>
     </html>
   );
