@@ -180,7 +180,6 @@ export default function ProductInfo() {
             content={
               <ul className="space-y-2 text-bodytext/90">
                 <li><strong className="font-semibold text-tiato/90">Ngày sản xuất:</strong> Xem trên bao bì</li>
-                <li><strong className="font-semibold text-tiato/90">Hạn sử dụng:</strong> 12 tháng kể từ ngày sản xuất</li>
                 <li><strong className="font-semibold text-tiato/90">Số bản tự công bố:</strong> 03/NCD/2023</li>
                 <li><strong className="font-semibold text-tiato/90">TCCS:</strong> 04:2023</li>
                 <li><strong className="font-semibold text-tiato/90">Xuất xứ:</strong> Việt Nam</li>

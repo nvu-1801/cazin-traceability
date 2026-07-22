@@ -9,8 +9,12 @@ const beVietnamPro = Be_Vietnam_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "CAZIN | Truy xuất nguồn gốc",
-  description: "Hệ thống truy xuất nguồn gốc sản phẩm nông sản hữu cơ",
+  title: "Trà Tía Tô Túi Lọc CAZIN",
+  description: "Tinh hoa trà thảo mộc Gia Lai",
+  icons: {
+    icon: "/logo/logo.png",
+    apple: "/logo/logo.png",
+  },
 };
 
 export default function RootLayout({

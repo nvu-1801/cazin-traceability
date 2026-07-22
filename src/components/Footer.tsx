@@ -1,20 +1,25 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="w-full bg-[#2D1421] text-white px-6 py-10 mt-auto rounded-b-[2.5rem] sm:rounded-b-[3rem]">
       <div className="max-w-3xl mx-auto flex flex-col items-center text-center space-y-6">
         
         <div className="space-y-1">
-          <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white font-bold text-2xl mx-auto mb-3">
-            C
+          <div className="w-12 h-12 mx-auto mb-3 relative flex items-center justify-center bg-white rounded-full overflow-hidden p-1">
+            <Image alt="CAZIN Logo" className="object-contain w-full h-full" height={48} src="/logo/logo.png" width={48}/>
           </div>
           <h3 className="font-semibold tracking-wider text-lg">CAZIN</h3>
-          <p className="text-white/60 text-sm italic">Khát vọng nâng tầm nông sản Việt</p>
+           <p className="text-white/60 text-sm italic">Khát vọng nâng tầm nông sản Việt</p>
+          <p className="text-sm md:text-base italic text-white/80 mt-1">Tinh hoa trà thảo mộc Gia Lai</p>
         </div>
 
         <div className="w-16 h-px bg-white/20 mx-auto"></div>
 
         <div className="space-y-3 text-sm text-white/80 leading-relaxed">
-          <p className="font-bold text-white uppercase text-base mb-4">HỘ KINH DOANH NGUYỄN CẢNH DUY</p>
+          <div className="mb-4">
+            <p className="font-bold text-white uppercase text-base">HỘ KINH DOANH NGUYỄN CẢNH DUY</p>
+          </div>
           
           <div className="flex items-center justify-center gap-2">
             <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
