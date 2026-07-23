@@ -10,9 +10,9 @@ const certImages = [
 
 export default function Certificates() {
   return (
-    <section className="w-full px-5 py-8 md:py-12 bg-white border-t border-cream">
+    <section className="w-full px-5 py-8 md:py-12  bg-[#F6F6F6] border-t border-cream">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-tiato mb-8 inline-flex items-center gap-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#583679] mb-8 inline-flex items-center gap-3">
           Chứng nhận chất lượng
           <span className="w-16 h-1 bg-[#4A4A4A]/20 rounded-full"></span>
         </h2>
@@ -24,7 +24,7 @@ export default function Certificates() {
               className="border-2 border-gray-100 rounded-2xl bg-white shadow-sm overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1.5 cursor-default"
             >
               {/* Tiêu đề đóng khung */}
-              <div className="w-full bg-[#612C47]/10 text-[#612C47] font-bold uppercase text-center py-4 px-4 text-sm md:text-base border-b border-[#612C47]/10 break-words flex items-center justify-center min-h-[4rem]">
+              <div className="w-full bg-[#583679]/5 text-[#583679] font-bold uppercase text-center py-4 px-4 text-sm md:text-base border-b border-[#583679]/10 break-words flex items-center justify-center min-h-[4rem]">
                 {cert.title}
               </div>
               

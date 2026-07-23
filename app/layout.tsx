@@ -12,8 +12,15 @@ export const metadata: Metadata = {
   title: "Trà Tía Tô Túi Lọc CAZIN",
   description: "Tinh hoa trà thảo mộc Gia Lai",
   icons: {
-    icon: "/logo/logo.png",
-    apple: "/logo/logo.png",
+    icon: [
+      { url: '/logo/logo.png', type: 'image/png' }
+    ],
+    apple: [
+      { url: '/logo/logo.png', type: 'image/png' }
+    ],
+  },
+  openGraph: {
+    images: ['/logo/logo.png'],
   },
 };
 
@@ -27,8 +34,11 @@ export default function RootLayout({
       lang="vi"
       className={`${beVietnamPro.variable} h-full antialiased`}
     >
-      <body className="min-h-full font-sans bg-cream text-bodytext">
-        <div className="max-w-7xl mx-auto w-full bg-cream min-h-screen relative overflow-x-hidden">
+      <head>
+        <link rel="icon" href="/logo/logo.png" type="image/png" sizes="any" />
+      </head>
+      <body className="min-h-full font-sans bg-[#F6F6F6] text-bodytext">
+        <div className="max-w-7xl mx-auto w-full bg-[#F6F6F6] min-h-screen relative overflow-x-hidden">
           {children}
         </div>
       </body>

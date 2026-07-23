@@ -14,17 +14,17 @@ function AccordionItem({
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="border-b border-tiato/10 py-4">
+    <div className="border-b border-[#583679]/10 py-4">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="flex w-full items-center justify-between text-left focus:outline-none group hover:bg-gray-50 transition-colors duration-300 p-3 -mx-3 rounded-xl"
       >
-        <span className="font-semibold text-tiato/90 text-[17px] md:text-[19px] group-hover:text-tiato transition-colors">
+        <span className="font-semibold text-[#583679] text-[17px] md:text-[19px] group-hover:text-[#583679] transition-colors">
           {title}
         </span>
-        <div className={`flex items-center justify-center w-7 h-7 rounded-full bg-tiato/5 transition-transform duration-300 ${isOpen ? "rotate-180 bg-tiato/10" : ""}`}>
+        <div className={`flex items-center justify-center w-7 h-7 rounded-full bg-[#583679]/5 transition-transform duration-300 ${isOpen ? "rotate-180 bg-[#583679]/10" : ""}`}>
           <svg 
-            className="h-4 w-4 text-tiato" 
+            className="h-4 w-4 text-[#583679]" 
             fill="none" 
             viewBox="0 0 24 24" 
             strokeWidth="2" 
@@ -55,7 +55,7 @@ export default function ProductInfo() {
         
         {/* Khối 2: Thông tin cơ bản */}
         <div className="mb-8">
-          <h1 className="text-2xl md:text-4xl font-bold text-tiato mb-4">
+          <h1 className="text-2xl md:text-4xl font-bold text-[#583679] mb-4">
             TRÀ TÍA TÔ TÚI LỌC CAZIN
           </h1>
           
@@ -70,27 +70,27 @@ export default function ProductInfo() {
 
           {/* Thành phần */}
           <div className="mb-6">
-            <h3 className="font-semibold text-tiato mb-2 text-lg">Thành phần:</h3>
+            <h3 className="font-semibold text-[#583679] mb-2 text-lg">Thành phần:</h3>
             <p className="text-bodytext md:text-[16px]">Tía tô 80% (thân và lá), Sả 10%, Gừng 10%.</p>
           </div>
 
           {/* Grid thông số */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-50">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 bg-white/50 p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-white/50">
             <div className="flex flex-col">
-              <span className="text-xs text-bodytext/60 uppercase tracking-wider mb-1">Khối lượng tịnh</span>
-              <span className="font-medium text-tiato md:text-lg">80g</span>
+              <span className="text-xs text-[#583679] uppercase tracking-wider mb-1">Khối lượng tịnh</span>
+              <span className="font-medium text-[#583679] md:text-lg">80g</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-xs text-bodytext/60 uppercase tracking-wider mb-1">Hạn sử dụng</span>
-              <span className="font-medium text-tiato md:text-lg">12 tháng</span>
+              <span className="text-xs text-[#583679] uppercase tracking-wider mb-1">Hạn sử dụng</span>
+              <span className="font-medium text-[#583679] md:text-lg">12 tháng</span>
             </div>
-            <div className="col-span-2 md:col-span-1 flex flex-col pt-2 md:pt-0 border-t md:border-t-0 md:border-l border-tiato/5 md:pl-4">
-              <span className="text-xs text-bodytext/60 uppercase tracking-wider mb-1">Quy cách</span>
-              <span className="font-medium text-tiato md:text-lg">40 túi lọc × 2g/hộp</span>
+            <div className="col-span-2 md:col-span-1 flex flex-col pt-2 md:pt-0 border-t md:border-t-0 md:border-l border-[#583679]/10 md:pl-4">
+              <span className="text-xs text-[#583679] uppercase tracking-wider mb-1">Quy cách</span>
+              <span className="font-medium text-[#583679] md:text-lg">40 túi lọc × 2g/hộp</span>
             </div>
-            <div className="col-span-2 md:col-span-3 flex flex-col pt-2 border-t border-tiato/5">
-              <span className="text-xs text-bodytext/60 uppercase tracking-wider mb-1">Chất liệu bao bì</span>
-              <span className="font-medium text-tiato md:text-lg">Túi lọc giấy; hộp giấy cứng đảm bảo an toàn dùng trong thực phẩm.</span>
+            <div className="col-span-2 md:col-span-3 flex flex-col pt-2 border-t border-[#583679]/10">
+              <span className="text-xs text-[#583679] uppercase tracking-wider mb-1">Chất liệu bao bì</span>
+              <span className="font-medium text-[#583679] md:text-lg">Túi lọc giấy; hộp giấy cứng đảm bảo an toàn dùng trong thực phẩm.</span>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function ProductInfo() {
             title="Thông tin nguyên liệu" 
             content={
               <p className="text-bodytext/90 leading-relaxed flex items-start gap-2">
-                <svg className="w-5 h-5 md:w-6 md:h-6 text-[#81C784] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <svg className="w-5 h-5 md:w-6 md:h-6 text-[#583679] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
                 </svg>
                 Tía tô, sả và gừng được thu mua từ các vùng nguyên liệu tại Canh Vinh, An Khê và các vùng lân cận thuộc tỉnh Gia Lai.
@@ -122,7 +122,7 @@ export default function ProductInfo() {
                   "Giải độc gan, giảm mỡ máu"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 md:w-6 md:h-6 text-[#3E5C40] shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                    <svg className="w-5 h-5 md:w-6 md:h-6 text-[#583679] shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                     </svg>
                     <span>{item}</span>
@@ -136,7 +136,7 @@ export default function ProductInfo() {
             title="Hướng dẫn sử dụng" 
             content={
               <div className="mt-1">
-                <p className="mb-4 font-medium text-tiato/90">Dùng 1 túi trà 2g cho mỗi lần pha.</p>
+                <p className="mb-4 font-medium text-[#583679]">Dùng 1 túi trà 2g cho mỗi lần pha.</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="bg-[#FFF4E5]/60 rounded-xl p-4 border border-[#FFE0B2]/50">
                     <div className="flex items-center gap-2 mb-2 text-[#D84315] font-medium text-lg">
@@ -179,10 +179,10 @@ export default function ProductInfo() {
             title="Thông tin truy xuất" 
             content={
               <ul className="space-y-2 text-bodytext/90">
-                <li><strong className="font-semibold text-tiato/90">Ngày sản xuất:</strong> Xem trên bao bì</li>
-                <li><strong className="font-semibold text-tiato/90">Số bản tự công bố:</strong> 03/NCD/2023</li>
-                <li><strong className="font-semibold text-tiato/90">TCCS:</strong> 04:2023</li>
-                <li><strong className="font-semibold text-tiato/90">Xuất xứ:</strong> Việt Nam</li>
+                <li><strong className="font-semibold text-[#583679]">Ngày sản xuất:</strong> Xem trên bao bì</li>
+                <li><strong className="font-semibold text-[#583679]">Số bản tự công bố:</strong> 03/NCD/2023</li>
+                <li><strong className="font-semibold text-[#583679]">TCCS:</strong> 04:2023</li>
+                <li><strong className="font-semibold text-[#583679]">Xuất xứ:</strong> Việt Nam</li>
               </ul>
             } 
           />

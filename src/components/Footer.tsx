@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#2D1421] text-white px-6 py-10 mt-auto rounded-b-[2.5rem] sm:rounded-b-[3rem]">
+    <footer className="w-full bg-[#583679] text-white px-6 py-10 mt-auto rounded-b-[2.5rem] sm:rounded-b-[3rem]">
       <div className="max-w-3xl mx-auto flex flex-col items-center text-center space-y-6">
         
         <div className="space-y-1">
@@ -19,6 +19,7 @@ export default function Footer() {
         <div className="space-y-3 text-sm text-white/80 leading-relaxed">
           <div className="mb-4">
             <p className="font-bold text-white uppercase text-base">HỘ KINH DOANH NGUYỄN CẢNH DUY</p>
+            <p className="mt-1"><span className="font-semibold text-white/90">Chủ sở hữu nhãn hiệu:</span> Nguyễn Cảnh Duy</p>
           </div>
           
           <div className="flex items-center justify-center gap-2">

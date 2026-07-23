@@ -5,6 +5,8 @@
   --color-cream: #FDFBF7;
   --color-bodytext: #4A4A4A;
   --font-be-vietnam-pro: var(--font-be-vietnam-pro);
+  --color-themeBg: #F6F6F6;
+  --color-themeText: #583679;
   --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   @keyframes fade-in-up {
@@ -20,7 +22,7 @@
 }
 
 body {
-  background-color: var(--color-cream);
+  background-color: var(--color-themeBg);
   color: var(--color-bodytext);
   font-family: var(--font-be-vietnam-pro), sans-serif;
 }

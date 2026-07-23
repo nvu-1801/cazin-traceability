@@ -9,7 +9,7 @@ const images = [
 
 export default function ProductGallery() {
   return (
-    <section className="w-full pt-24 pb-8">
+    <section className="w-full pt-8 pb-8">
       {/* Container cuộn ngang với CSS Scroll Snap */}
       <div 
         className="flex overflow-x-auto snap-x snap-mandatory gap-4 px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -24,7 +24,7 @@ export default function ProductGallery() {
               alt={`Hình ảnh sản phẩm ${index + 1}`}
               fill
               sizes="(max-width: 768px) 100vw, 400px"
-              className="object-cover transition-transform duration-500 hover:scale-105"
+              className="object-contain transition-transform duration-500 hover:scale-105"
               priority={index === 0} // Ưu tiên load ảnh đầu tiên
             />
           </div>

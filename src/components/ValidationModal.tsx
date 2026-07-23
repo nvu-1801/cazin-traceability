@@ -29,12 +29,12 @@ export default function ValidationModal({ onValid }: { onValid: () => void }) {
     >
       <div className="flex flex-col items-center animate-fade-in-up">
         {/* Logo */}
-        <div className="w-16 h-16 rounded-full bg-tiato flex items-center justify-center text-cream font-bold text-3xl shadow-lg mb-6">
+        <div className="w-16 h-16 rounded-full bg-[#583679] flex items-center justify-center text-cream font-bold text-3xl shadow-lg mb-6">
           C
         </div>
         
         {/* Title */}
-        <h2 className="text-xl font-semibold text-tiato tracking-wide mb-2">CAZIN</h2>
+        <h2 className="text-xl font-semibold text-[#583679] tracking-wide mb-2">CAZIN</h2>
         
         {/* Subtitle / Loading */}
         <div className="flex items-center gap-3 text-bodytext/70 text-sm">

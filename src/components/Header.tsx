@@ -45,7 +45,7 @@ export default function Header() {
             VI | EN
           </button>
           
-          <button className="bg-[#612C47] text-white px-5 py-2 md:px-6 md:py-2.5 text-sm rounded-full font-medium hover:bg-[#4a2135] transition-colors shadow-sm">
+          <button className="bg-[#583679] text-white px-5 py-2 md:px-6 md:py-2.5 text-sm rounded-full font-medium hover:bg-[#4a2135] transition-colors shadow-sm">
             Liên hệ
           </button>
         </div>
