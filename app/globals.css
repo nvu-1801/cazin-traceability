@@ -3,7 +3,7 @@
 @theme {
   --color-tiato: #612C47;
   --color-cream: #FDFBF7;
-  --color-bodytext: #4A4A4A;
+  --color-bodytext: #000000;
   --font-be-vietnam-pro: var(--font-be-vietnam-pro);
   --color-themeBg: #F6F6F6;
   --color-themeText: #583679;
@@ -23,6 +23,6 @@
 
 body {
   background-color: var(--color-themeBg);
-  color: var(--color-bodytext);
+  color: #000000;
   font-family: var(--font-be-vietnam-pro), sans-serif;
 }

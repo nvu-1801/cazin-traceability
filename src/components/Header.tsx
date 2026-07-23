@@ -41,7 +41,7 @@ export default function Header() {
         </Link>
         
         <div className="flex items-center gap-4 md:gap-6">
-          <button className="text-xs font-medium text-bodytext/70 hover:text-tiato transition-colors tracking-widest uppercase">
+          <button className="text-xs font-medium text-black hover:text-[#583679] transition-colors tracking-widest uppercase">
             VI | EN
           </button>
           

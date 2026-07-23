@@ -39,7 +39,7 @@ function AccordionItem({
         className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
       >
         <div className="overflow-hidden">
-          <div className="pt-4 pb-2 text-[15px] md:text-[16px] text-bodytext leading-relaxed">
+          <div className="pt-4 pb-2 text-[15px] md:text-[16px] text-black leading-relaxed">
             {content}
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function ProductInfo() {
             TRÀ TÍA TÔ TÚI LỌC CAZIN
           </h1>
           
-          <div className="text-bodytext/80 text-[15px] md:text-[17px] leading-relaxed italic mb-6 space-y-3">
+          <div className="text-black text-[15px] md:text-[17px] leading-relaxed italic mb-6 space-y-3">
             <p>
               Trà tía tô túi lọc CAZIN là sự kết tinh từ nguồn dược liệu tuyển chọn tại Gia Lai, kết hợp hài hòa giữa tía tô, sả và gừng, mang hương thơm thanh dịu và vị ấm tự nhiên đặc trưng. Được chế biến từ 100% nguyên liệu tự nhiên, không hương liệu, không chất bảo quản, sản phẩm mang đến trải nghiệm thưởng trà tiện lợi và chất lượng.
             </p>
@@ -71,7 +71,7 @@ export default function ProductInfo() {
           {/* Thành phần */}
           <div className="mb-6">
             <h3 className="font-semibold text-[#583679] mb-2 text-lg">Thành phần:</h3>
-            <p className="text-bodytext md:text-[16px]">Tía tô 80% (thân và lá), Sả 10%, Gừng 10%.</p>
+            <p className="text-black md:text-[16px]">Tía tô 80% (thân và lá), Sả 10%, Gừng 10%.</p>
           </div>
 
           {/* Grid thông số */}
@@ -100,7 +100,7 @@ export default function ProductInfo() {
           <AccordionItem 
             title="Thông tin nguyên liệu" 
             content={
-              <p className="text-bodytext/90 leading-relaxed flex items-start gap-2">
+              <p className="text-black leading-relaxed flex items-start gap-2">
                 <svg className="w-5 h-5 md:w-6 md:h-6 text-[#583679] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
                 </svg>
@@ -147,7 +147,7 @@ export default function ProductInfo() {
                       </svg>
                       Uống nóng
                     </div>
-                    <p className="text-bodytext/90 leading-relaxed">Ngâm 01 túi trà với 120ml nước nóng trong 5 phút.</p>
+                    <p className="text-black leading-relaxed">Ngâm 01 túi trà với 120ml nước nóng trong 5 phút.</p>
                   </div>
                   
                   <div className="bg-[#E3F2FD]/60 rounded-xl p-4 border border-[#BBDEFB]/50">
@@ -158,7 +158,7 @@ export default function ProductInfo() {
                       </svg>
                       Uống lạnh
                     </div>
-                    <p className="text-bodytext/90 leading-relaxed">Ngâm 01 túi trà với 90ml nước nóng trong 5 phút, thêm đá tùy khẩu vị.</p>
+                    <p className="text-black leading-relaxed">Ngâm 01 túi trà với 90ml nước nóng trong 5 phút, thêm đá tùy khẩu vị.</p>
                   </div>
                 </div>
               </div>
@@ -168,7 +168,7 @@ export default function ProductInfo() {
           <AccordionItem 
             title="Lưu ý & Bảo quản" 
             content={
-              <p className="text-bodytext/90 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 <strong>Bảo quản:</strong> Để nơi khô ráo, thoáng mát.<br/>
                 <strong>Khuyến cáo:</strong> Không sử dụng khi sản phẩm có dấu hiệu ẩm mốc, biến màu hoặc có mùi lạ. Không sử dụng hương liệu, chất bảo quản.
               </p>
@@ -178,7 +178,7 @@ export default function ProductInfo() {
           <AccordionItem 
             title="Thông tin truy xuất" 
             content={
-              <ul className="space-y-2 text-bodytext/90">
+              <ul className="space-y-2 text-black">
                 <li><strong className="font-semibold text-[#583679]">Ngày sản xuất:</strong> Xem trên bao bì</li>
                 <li><strong className="font-semibold text-[#583679]">Số bản tự công bố:</strong> 03/NCD/2023</li>
                 <li><strong className="font-semibold text-[#583679]">TCCS:</strong> 04:2023</li>

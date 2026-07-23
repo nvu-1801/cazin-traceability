@@ -59,7 +59,7 @@ export default function ProcessFlow() {
           {/* Phần 2: Thuyết minh chi tiết */}
           <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
             <h3 className="font-semibold text-[#583679] mb-3 text-lg">Thuyết minh quy trình:</h3>
-            <p className="text-bodytext/90 text-[15px] md:text-[16px] leading-relaxed">
+            <p className="text-black text-[15px] md:text-[16px] leading-relaxed">
               Nguyên liệu đầu vào thân và lá Tía Tô được chọn lọc kỹ về chất lượng, sau đó được rửa sạch, băm nhỏ. Tiếp đến đưa qua máy sấy khô đạt theo tiêu chuẩn quy định rồi tiến hành nghiền và phối trộn theo tỷ lệ: gừng 10%, tía tô 80%, sả 10%. Tiếp tục quy trình, trà Tía Tô được đóng gói túi lọc rồi cho vào hộp giấy có cấu tạo đặc biệt nhằm giữ lại mùi hương, mang lại vẻ sang trọng và đảm bảo an toàn cho người sử dụng.
             </p>
           </div>
