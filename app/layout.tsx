@@ -37,8 +37,8 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo/logo.png" type="image/png" sizes="any" />
       </head>
-      <body className="min-h-full font-sans bg-[#F6F6F6] text-bodytext">
-        <div className="max-w-7xl mx-auto w-full bg-[#F6F6F6] min-h-screen relative overflow-x-hidden">
+      <body className="min-h-full font-sans bg-background text-textMain">
+        <div className="max-w-7xl mx-auto w-full bg-background min-h-screen relative overflow-x-hidden">
           {children}
         </div>
       </body>
