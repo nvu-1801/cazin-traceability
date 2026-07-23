@@ -29,14 +29,14 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="relative w-[120px] h-[40px]">
+          <div className="w-14 h-14 relative flex items-center justify-center bg-white rounded-full overflow-hidden p-1.5 shadow-sm">
             <Image 
               src="/logo/logo.png" 
               alt="CAZIN Logo" 
               fill
-              sizes="120px"
-              className="object-contain object-left"
-            />
+              sizes="56px"
+              className="object-contain p-0.5"
+            />  
           </div>
         </Link>
         

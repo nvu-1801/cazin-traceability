@@ -52,7 +52,7 @@ export default function ProductInfo() {
         {/* Khối 3: Thông tin chi tiết (Static List) */}
         <div className="flex flex-col space-y-8 mt-10">
           
-          {/* Khối 1: Thông tin nguyên liệu */}
+          {/* 1. Thông tin nguyên liệu */}
           <div>
             <h3 className="font-semibold text-lg text-primary mb-3">Thông tin nguyên liệu</h3>
             <p className="text-textMain text-[15px] leading-relaxed">
@@ -60,7 +60,7 @@ export default function ProductInfo() {
             </p>
           </div>
 
-          {/* Khối 2: Công dụng nổi bật */}
+          {/* 2. Công dụng nổi bật */}
           <div>
             <h3 className="font-semibold text-lg text-primary mb-3">Công dụng nổi bật</h3>
             <ul className="list-none p-0 m-0 space-y-2">
@@ -72,56 +72,46 @@ export default function ProductInfo() {
             </ul>
           </div>
 
-          {/* Khối 3: Hướng dẫn sử dụng */}
+          {/* 3. Hướng dẫn sử dụng */}
           <div>
             <h3 className="font-semibold text-lg text-primary mb-3">Hướng dẫn sử dụng</h3>
-            <div className="mt-1">
-              <p className="mb-4 font-medium text-primary">Dùng 1 túi trà 2g cho mỗi lần pha.</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-[#FFF4E5]/60 rounded-xl p-4 border border-[#FFE0B2]/50">
-                  <div className="flex items-center gap-2 mb-2 text-[#D84315] font-medium text-lg">
-                    {/* Fire/Hot icon */}
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
-                    </svg>
-                    Uống nóng
-                  </div>
-                  <p className="text-textMain text-[15px] leading-relaxed">Ngâm 01 túi trà với 120ml nước nóng trong 5 phút.</p>
-                </div>
-                
-                <div className="bg-[#E3F2FD]/60 rounded-xl p-4 border border-[#BBDEFB]/50">
-                  <div className="flex items-center gap-2 mb-2 text-[#1565C0] font-medium text-lg">
-                    {/* Snowflake icon */}
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15m10.607-5.303l-10.607 10.607m10.607 0L7.393 6.697" />
-                    </svg>
-                    Uống lạnh
-                  </div>
-                  <p className="text-textMain text-[15px] leading-relaxed">Ngâm 01 túi trà với 90ml nước nóng trong 5 phút, thêm đá tùy khẩu vị.</p>
-                </div>
+            <div className="space-y-3">
+              <p className="text-textMain text-[15px]">Dùng 1 túi trà 2g cho mỗi lần pha.</p>
+              
+              <div>
+                <p className="text-textMain text-[15px] font-semibold mb-1">Uống nóng</p>
+                <p className="text-textMain text-[15px]">Ngâm 01 túi trà với 120ml nước nóng trong 5 phút.</p>
+              </div>
+              
+              <div>
+                <p className="text-textMain text-[15px] font-semibold mb-1">Uống lạnh</p>
+                <p className="text-textMain text-[15px]">Ngâm 01 túi trà với 90ml nước nóng trong 5 phút, thêm đá tùy khẩu vị.</p>
               </div>
             </div>
           </div>
 
-          {/* Khối 4: Lưu ý & Bảo quản */}
+          {/* 4. Lưu ý & Bảo quản */}
           <div>
             <h3 className="font-semibold text-lg text-primary mb-3">Lưu ý & Bảo quản</h3>
-            <p className="text-textMain text-[15px] leading-relaxed">
-              <strong>Bảo quản:</strong> Để nơi khô ráo, thoáng mát.<br/>
-              <strong>Khuyến cáo:</strong> Không sử dụng khi sản phẩm có dấu hiệu ẩm mốc, biến màu hoặc có mùi lạ. Không sử dụng hương liệu, chất bảo quản.
-            </p>
+            <div className="space-y-2">
+              <p className="text-textMain text-[15px]">
+                <span className="font-semibold">Bảo quản:</span> Để nơi khô ráo, thoáng mát.
+              </p>
+              <p className="text-textMain text-[15px]">
+                <span className="font-semibold">Khuyến cáo:</span> Không sử dụng khi sản phẩm có dấu hiệu ẩm mốc, biến màu hoặc có mùi lạ. Không sử dụng hương liệu, chất bảo quản.
+              </p>
+            </div>
           </div>
 
-          {/* Khối 5: Thông tin truy xuất */}
+          {/* 5. Thông tin truy xuất */}
           <div>
             <h3 className="font-semibold text-lg text-primary mb-3">Thông tin truy xuất</h3>
-            <ul className="list-none p-0 m-0 space-y-2">
-              <li className="text-textMain text-[15px]"><strong className="font-semibold text-primary">Ngày sản xuất:</strong> Xem trên bao bì</li>
-              <li className="text-textMain text-[15px]"><strong className="font-semibold text-primary">Số bản tự công bố:</strong> 03/NCD/2023</li>
-              <li className="text-textMain text-[15px]"><strong className="font-semibold text-primary">TCCS:</strong> 04:2023</li>
-              <li className="text-textMain text-[15px]"><strong className="font-semibold text-primary">Xuất xứ:</strong> Việt Nam</li>
-            </ul>
+            <div className="space-y-2">
+              <p className="text-textMain text-[15px]"><span className="font-semibold">Ngày sản xuất:</span> Xem trên bao bì</p>
+              <p className="text-textMain text-[15px]"><span className="font-semibold">Số bản tự công bố:</span> 03/NCD/2023</p>
+              <p className="text-textMain text-[15px]"><span className="font-semibold">TCCS:</span> 04:2023</p>
+              <p className="text-textMain text-[15px]"><span className="font-semibold">Xuất xứ:</span> Việt Nam</p>
+            </div>
           </div>
 
         </div>
