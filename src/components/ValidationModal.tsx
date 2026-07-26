@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
+
 
 export default function ValidationModal({ onValid }: { onValid: () => void }) {
   const [isVisible, setIsVisible] = useState(true);
@@ -29,8 +31,14 @@ export default function ValidationModal({ onValid }: { onValid: () => void }) {
     >
       <div className="flex flex-col items-center animate-fade-in-up">
         {/* Logo */}
-        <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-cream font-bold text-3xl shadow-lg mb-6">
-          C
+        <div className="w-16 h-16 relative flex items-center justify-center bg-white rounded-full overflow-hidden p-1.5 shadow-lg mb-6">
+          <Image 
+            src="/logo/logo.png" 
+            alt="CAZIN Logo" 
+            fill
+            sizes="64px"
+            className="object-contain p-1"
+          />
         </div>
         
         {/* Title */}
