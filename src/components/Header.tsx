@@ -45,9 +45,14 @@ export default function Header() {
             VI | EN
           </button>
           
-          <button className="bg-[#583679] text-white px-5 py-2 md:px-6 md:py-2.5 text-sm rounded-full font-medium hover:bg-[#4a2135] transition-colors shadow-sm">
+          <a 
+            href="https://zalo.me/0914417583"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#583679] text-white px-5 py-2 md:px-6 md:py-2.5 text-sm rounded-full font-medium hover:bg-[#4a2135] transition-colors shadow-sm flex items-center justify-center"
+          >
             Liên hệ
-          </button>
+          </a>
         </div>
       </div>
     </header>
